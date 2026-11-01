@@ -1,0 +1,4 @@
+property_id,ppa_price_eur_per_kwh,pv_density_kwp_per_m2,annual_yield_kwh_per_kwp,ppa_term_years,dataset_type
+PROP-001,0.18,0.2,950,15,illustrative
+PROP-002,0.2,0.2,900,15,illustrative
+PROP-003,0.17,0.2,950,15,illustrative

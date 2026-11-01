@@ -1,0 +1,31 @@
+# Local test stack: PostgreSQL 16 / PostGIS 3.4 plus the pipeline container.
+#   docker compose up -d db
+#   docker compose run --rm app python scripts/run_pipeline.py --write-db
+#   docker compose down -v
+#
+# The credentials below are throwaway values for a disposable local container only.
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: iris
+      POSTGRES_USER: iris_candidate
+      POSTGRES_PASSWORD: local_test_only
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./sql/01_staging_ddl.sql:/docker-entrypoint-initdb.d/01_staging_ddl.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U iris_candidate -d iris"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  app:
+    build: .
+    environment:
+      DB_URI: postgresql+psycopg://iris_candidate:local_test_only@db:5432/iris
+    depends_on:
+      db:
+        condition: service_healthy
+    profiles: ["app"]

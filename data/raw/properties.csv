@@ -1,0 +1,4 @@
+property_id,property_name,property_type,city,country,land_area_m2,building_area_m2,easting_m,northing_m,crs,data_source
+PROP-001,Industrial Warehouse,Warehouse,Hannover,Germany,12000,6000,550050,5800030,EPSG:25832,mock
+PROP-002,Office Building,Office,Hannover,Germany,5000,2500,550525,5800525,EPSG:25832,mock
+PROP-003,Logistics Center,Logistics,Hannover,Germany,18000,9000,551050,5801045,EPSG:25832,mock

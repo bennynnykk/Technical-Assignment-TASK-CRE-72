@@ -1,0 +1,7 @@
+tenant_id,property_id,tenant_name,annual_demand_kwh,data_source
+TEN-001,PROP-001,Tenant A,300000,mock
+TEN-002,PROP-001,Tenant B,180000,mock
+TEN-003,PROP-002,Tenant C,120000,mock
+TEN-004,PROP-002,Tenant D,90000,mock
+TEN-005,PROP-003,Tenant E,450000,mock
+TEN-006,PROP-003,Tenant F,250000,mock

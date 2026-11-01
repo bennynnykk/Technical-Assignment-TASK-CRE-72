@@ -1,0 +1,53 @@
+{
+    "status": "success",
+    "datasets": {
+        "properties": {
+            "rows_in": 3,
+            "missing_values": 0,
+            "rows_valid": 3,
+            "rows_rejected": 0
+        },
+        "roofs": {
+            "rows_in": 5,
+            "missing_values": 0,
+            "rows_valid": 2,
+            "rows_rejected": 3
+        },
+        "tenants": {
+            "rows_in": 6,
+            "missing_values": 0,
+            "rows_valid": 6,
+            "rows_rejected": 0
+        },
+        "leases": {
+            "rows_in": 6,
+            "missing_values": 0,
+            "rows_valid": 6,
+            "rows_rejected": 0
+        },
+        "ppa_assumptions": {
+            "rows_in": 3,
+            "missing_values": 0,
+            "rows_valid": 3,
+            "rows_rejected": 0
+        }
+    },
+    "repaired_geometries": 1,
+    "roofs_rejected": [
+        {
+            "roof_id": "ROOF-003",
+            "reason": "empty geometry"
+        },
+        {
+            "roof_id": "ROOF-004",
+            "reason": "unexpected CRS EPSG:4326"
+        },
+        {
+            "roof_id": "ROOF-005",
+            "reason": "coordinates outside the EPSG:25832 plausibility window"
+        }
+    ],
+    "properties_without_valid_roof": [
+        "PROP-003"
+    ]
+}
